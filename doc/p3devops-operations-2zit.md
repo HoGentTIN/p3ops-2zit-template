@@ -132,16 +132,17 @@ De toegekende score hangt af van in hoeverre je de requirements gerealiseerd heb
     - De documentatie is onvolledig
 - **Voldoende (35-49/70)**:
     - Alle must-haves zijn gerealiseerd
-    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Should-haves of could-haves zijn niet of gedeeltelijk gerealiseerd
+    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - De documentatie is volledig en overzichtelijk
 - **Goed (50-59/70)**:
     - Alle must-haves en should-haves zijn gerealiseerd
     - Could-haves zijn niet of gedeeltelijk gerealiseerd
     - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Tijdens de demonstratie toont de student aan inzicht te hebben in de materie
+    - De documentatie is volledig en overzichtelijk
 - **Zeer goed (>= 60/70)**:
     - Ook alle could-have **(C)** requirements zijn geïmplementeerd
-    - De documentatie is uitmuntend in volledigheid en detail
     - De student heeft de correcte werking van de build pipelines of applicatieservers aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Tijdens de demonstratie toont de student aan een diep inzicht te hebben in de materie
+    - De documentatie is uitmuntend in volledigheid, overzichtelijkheid en detail
