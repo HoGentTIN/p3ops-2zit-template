@@ -1,15 +1,17 @@
 ---
-title: 'Individuele opdracht 2e zittijd'
-subtitle: 'DevOps project: Operations'
-author: 'PrB toegepaste informatica, HOGENT'
-date: 'Academiejaar 2021-2022'
-lang: 'nl-BE'
-documentclass: article
-mainfont: Montserrat
-monofont: Fira Code
-fontsize: 11pt
-papersize: a4paper
-geometry: margin=2cm
+language: 'dutch'
+title: 'Afspraken en opgave 2e zittijd'
+authors:
+    - name: Bert Van Vreckem
+      email: bert.vanvreckem@hogent.be
+    - name: Dirk Thijs
+      email: dirk.thijs@hogent.be
+
+studyprogramme: Professionele bachelor toegepaste informatica
+course: 'DevOps Project: Operations'
+assignmenttype: Individuele opdracht
+academicyear: 2022-2023
+
 abstract: |
     In dit document vinden studenten die voor dit opleidingsonderdeel niet geslaagd waren in de eerste zittijd alle informatie over deelnemen aan de tweede zittijd, meer bepaald alle praktische informatie en de (individuele) opdracht.
 ...
@@ -37,7 +39,7 @@ Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelate
 
 De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende deliverables:
 
-- Een individuele **Github-repository** (die je aanmaakt via Github Classroom volgens onze instructies) met daarin:
+- Een individuele **Github-repository** (die je aanmaakt met Github Classroom via deze link: <https://classroom.github.com/a/qKeiQFVM>) met daarin:
     - Alle **broncode** voor het opzetten van de test- en productie-omgeving (zie verder)
     - Alle **procedurehandleidingen** die de lezer moeten in staat stellen om de omgevingen volledig te reproduceren, zonder verdere uitleg
 - De omgevingen zelf, waarvan de werking a.h.v. een **demonstratie** aangetoond wordt
@@ -69,9 +71,13 @@ Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te ge
 
 ## Casus
 
-Gebruik als casus deze voorbeeld-applicatie uit de cursus Enterprise C#: TODO:URL
+Gebruik als casus deze voorbeeld-applicatie uit de cursus Enterprise C#: <https://github.com/HOGENT-Web/csharp-ch-9-exercise-1/>, meer bepaald de `solution` branch. De `main` branch bevat enkel de opgave en is onvolledig.
 
 Maak een fork van deze applicatie onder je eigen Github-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
+
+De webapplicatie kan gebouwd en opgestart worden door in directory `src/server` respectievelijk de commando's `dotnet build` en `dotnet run` uit te voeren.
+
+Als het nuttig of nodig is om bestanden toe te voegen aan deze repository om deployment te vergemakkelijken (bv. Dockerfile, docker-compose.yml, Appsettings.*.json configuratie voor lokale/cloud-omgeving, enz.) dan is dat zeker toegelaten.
 
 ## Build server
 
@@ -97,14 +103,17 @@ Voorzie twee instanties van de applicatieserver:
 
 - **(M)** Een lokale VirtualBox-VM, opgezet met Vagrant
     - De installatie is volledig geautomatiseerd (met een Bash-script of Ansible): na `vagrant up` is de server zonder verdere manuele handelingen klaar om de applicatie te hosten.
+    - De applicatie is gebaseerd op .NET 5.0. Met de runtime heb je voldoende om de applicatie te lanceren (je hoeft dus niet de SDK te installeren).
 - **(S)** Een applicatieserver gehost op een cloud-platform (naar keuze)
     - Het opzetten van de VM is beschreven in een gedetailleerde procedurehandleiding
     - Na initialiseren van de VM is de verdere installatie en configuratie geautomatiseerd met hetzelfde script of playbook als de lokale instantie.
 
+Ter info, een video over het hosten van een ASP.NET Core applicatie op Azure: <https://www.youtube.com/watch?v=UpWeffxf790>.
+
 Verder hou je rekening met volgende requirements:
 
-- **(M)** De applicatie draait binnen een containercd ..
-- **(S)** Een eventuele database draait in een aparte container
+- **(M)** De applicatie draait binnen een container
+- **(S)** De database draait in een aparte container
 - **(M)** De volledige installatie en configuratie van de applicatieserver is geautomatiseerd. Na uitvoeren van deze stap is de server dus klaar om de applicatie te hosten.
 - **(M)** Via port-forwarding wordt er voor gezorgd dat de webapplicatie zichtbaar is door in de webbrowser `https://IP_ADRES/` of `https://HOSTNAAM/` in te tikken (dus zonder een poortnummer toe te moeten voegen).
 - **(C)** De toestand van de applicatieserver is op te volgen via een monitoring-systeem, meer bepaald:
@@ -131,13 +140,13 @@ De toegekende score hangt af van in hoeverre je de requirements gerealiseerd heb
     - De student heeft de correcte werking van de build pipelines of applicatieservers niet kunnen aantonen tijdens de demonstratie
     - De documentatie is onvolledig
 - **Voldoende (35-49/70)**:
-    - Alle must-haves zijn gerealiseerd
-    - Should-haves of could-haves zijn niet of gedeeltelijk gerealiseerd
-    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
+    - Alle must-haves **(M)** zijn gerealiseerd
+    - Should-haves **(S)** of could-haves **(C)** zijn niet of gedeeltelijk gerealiseerd
+    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code. Voorbeeldscenario: (1)De applicatie draait en is zichtbaar in een webbrowser; (2) Er wordt een wijziging aangebracht in de broncode van de applicatie (bv. achtergrondkleur veranderen); (3) De build pipeline wordt opgestart; (4) Na afloop zien we in de webbrowser dat de wijzigingen doorgevoerd zijn.
     - De documentatie is volledig en overzichtelijk
 - **Goed (50-59/70)**:
-    - Alle must-haves en should-haves zijn gerealiseerd
-    - Could-haves zijn niet of gedeeltelijk gerealiseerd
+    - Alle must-haves **(M)** en should-haves **(S)** zijn gerealiseerd
+    - Could-haves **(C)** zijn niet of gedeeltelijk gerealiseerd
     - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Tijdens de demonstratie toont de student aan inzicht te hebben in de materie
     - De documentatie is volledig en overzichtelijk
