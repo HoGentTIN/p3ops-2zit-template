@@ -140,18 +140,18 @@ De toegekende score hangt af van in hoeverre je de requirements gerealiseerd heb
     - De Must-have **(M)** requirements zijn slechts gedeeltelijk gerealiseerd.
     - De student heeft de correcte werking van de build pipelines of applicatieservers niet kunnen aantonen tijdens de demonstratie
     - De documentatie is onvolledig
-- **Voldoende (35-49/70)**:
+- **Voldoende (35-40/70)**:
     - Alle must-haves **(M)** zijn gerealiseerd
     - Should-haves **(S)** of could-haves **(C)** zijn niet of gedeeltelijk gerealiseerd
     - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code. Voorbeeldscenario: (1)De applicatie draait en is zichtbaar in een webbrowser; (2) Er wordt een wijziging aangebracht in de broncode van de applicatie (bv. achtergrondkleur veranderen); (3) De build pipeline wordt opgestart; (4) Na afloop zien we in de webbrowser dat de wijzigingen doorgevoerd zijn.
     - De documentatie is volledig en overzichtelijk
-- **Goed (50-59/70)**:
+- **Goed (41-54/70)**:
     - Alle must-haves **(M)** en should-haves **(S)** zijn gerealiseerd
     - Could-haves **(C)** zijn niet of gedeeltelijk gerealiseerd
     - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Tijdens de demonstratie toont de student aan inzicht te hebben in de materie
     - De documentatie is volledig en overzichtelijk
-- **Zeer goed (>= 60/70)**:
+- **Zeer goed ($\geq$ 55/70)**:
     - Ook alle could-have **(C)** requirements zijn geïmplementeerd
     - De student heeft de correcte werking van de build pipelines of applicatieservers aangetoond tijdens de demonstratie en aan de hand van de aanwezige code
     - Tijdens de demonstratie toont de student aan een diep inzicht te hebben in de materie
