@@ -4,8 +4,8 @@ title: 'Afspraken en opgave 2e zittijd'
 authors:
     - name: Bert Van Vreckem
       email: bert.vanvreckem@hogent.be
-    - name: Dirk Thijs
-      email: dirk.thijs@hogent.be
+    - name: Thomas Aelbrecht
+      email: thomas.aelbrecht@hogent.be
 
 studyprogramme: Professionele bachelor toegepaste informatica
 course: 'DevOps Project: Operations'
@@ -39,20 +39,20 @@ Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelate
 
 De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende deliverables:
 
-- Een individuele **Github-repository** (die je aanmaakt met Github Classroom via deze link: <https://classroom.github.com/a/qKeiQFVM>) met daarin:
+- Een individuele **Github-repository** (die je aanmaakt met Github Classroom via deze link: <TODO>) met daarin:
     - Alle **broncode** voor het opzetten van de test- en productie-omgeving (zie verder)
     - Alle **procedurehandleidingen** die de lezer moeten in staat stellen om de omgevingen volledig te reproduceren, zonder verdere uitleg
 - De omgevingen zelf, waarvan de werking a.h.v. een **demonstratie** aangetoond wordt
 
 ## Deadline
 
-De **deadline** voor de individuele opdracht is **maandag 22 agustus 2022 om 12:00** ('s middags, dus niet middernacht!).
+De **deadline** voor de individuele opdracht is **maandag 21 agustus 2023 om 12:00** ('s middags, dus niet middernacht!).
 
 De toestand van de Github-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet mogelijk zijn.
 
-Als je geen Github-repo aangemaakt hebt, of als blijkt dat de inzending in het geheel niet voldoet aan de verwachtingen, dan volgt er geen demonstratie en krijg je de vermelding "Afwezig". Je wordt hiervan op de hoogte gebracht.
+Studenten van wie de inzending ontvankelijk blijkt om beoordeeld te worden, zullen een uitnodiging krijgen voor de verdediging van hun werk, tijdens het moment dat op het examenrooster ingepland is.
 
-Studenten van wie de inzending ontvankelijk is om beoordeeld te worden, zullen een uitnodiging krijgen voor de verdediging van hun werk, tijdens het moment dat op het examenrooster ingepland is.
+Als je geen Github-repo aangemaakt hebt, krijg je de vermelding "Afwezig". Als blijkt dat de inzending in het geheel niet voldoet aan de verwachtingen, dan krijg je examencijfer 0. In beide gevallen volgt er geen demonstratie. Je wordt hiervan op de hoogte gebracht.
 
 # Opdracht
 
@@ -71,13 +71,13 @@ Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te ge
 
 ## Casus
 
-Gebruik als casus deze voorbeeld-applicatie uit de cursus Enterprise C#: <https://github.com/HOGENT-Web/csharp-ch-9-exercise-1/>, meer bepaald de `solution` branch. De `main` branch bevat enkel de opgave en is onvolledig.
+Gebruik als casus deze C#-applicatie: <https://github.com/HoGentTIN/p3ops-22-23-2zit-app>.
 
 Maak een fork van deze applicatie onder je eigen Github-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
 
-De webapplicatie kan gebouwd en opgestart worden door in directory `src/server` respectievelijk de commando's `dotnet build` en `dotnet run` uit te voeren.
+De README bevat instructies om de applicatie uit te rollen in een development- of productie-omgeving en hoe te testen.
 
-Als het nuttig of nodig is om bestanden toe te voegen aan deze repository om deployment te vergemakkelijken (bv. Dockerfile, docker-compose.yml, Appsettings.*.json configuratie voor lokale/cloud-omgeving, enz.) dan is dat zeker toegelaten.
+Als het nuttig of nodig is om bestanden toe te voegen aan jouw fork van deze repository om deployment te vergemakkelijken (bv. Dockerfile, docker-compose.yml, Appsettings.*.json configuratie voor lokale/cloud-omgeving, enz.) dan is dat zeker toegelaten. Ook wijzigingen aan de applicatie zelf (bv. om te demonstreren hoe de build-pipeline werkt, impact van wijzigingen op tests of gedrag van de applicatie in productie, ...) zijn ook toegelaten.
 
 ## Build server
 
@@ -121,6 +121,7 @@ Verder hou je rekening met volgende requirements:
     - Overzicht containers: CPU, geheugen, ...
     - Webserver-statistieken: requests, errors, ...
     - Database-server statistieken: queries, errors, ...
+- **(C)** Er is een doorlichting van de productie-opstelling gebeurd op vlak van security. De resultaten van deze doorlichting zijn gedocumenteerd en op basis daarvan zijn er verbeteringen toegepast in de opstelling.
 
 ## Documentatie
 
