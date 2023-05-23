@@ -39,7 +39,7 @@ Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelate
 
 De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende deliverables:
 
-- Een individuele **Github-repository** (die je aanmaakt met Github Classroom via deze link: <TODO>) met daarin:
+- Een individuele **GitHub-repository** (die je aanmaakt met GitHub Classroom via deze link: <TODO>) met daarin:
     - Alle **broncode** voor het opzetten van de test- en productie-omgeving (zie verder)
     - Alle **procedurehandleidingen** die de lezer moeten in staat stellen om de omgevingen volledig te reproduceren, zonder verdere uitleg
 - De omgevingen zelf, waarvan de werking a.h.v. een **demonstratie** aangetoond wordt
@@ -48,11 +48,11 @@ De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende
 
 De **deadline** voor de individuele opdracht is **maandag 21 agustus 2023 om 12:00** ('s middags, dus niet middernacht!).
 
-De toestand van de Github-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet mogelijk zijn.
+De toestand van de GitHub-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet mogelijk zijn.
 
 Studenten van wie de inzending ontvankelijk blijkt om beoordeeld te worden, zullen een uitnodiging krijgen voor de verdediging van hun werk, tijdens het moment dat op het examenrooster ingepland is.
 
-Als je geen Github-repo aangemaakt hebt, krijg je de vermelding "Afwezig". Als blijkt dat de inzending in het geheel niet voldoet aan de verwachtingen, dan krijg je examencijfer 0. In beide gevallen volgt er geen demonstratie. Je wordt hiervan op de hoogte gebracht.
+Als je geen GitHub-repo aangemaakt hebt, krijg je de vermelding "Afwezig". Als blijkt dat de inzending in het geheel niet voldoet aan de verwachtingen, dan krijg je examencijfer 0. In beide gevallen volgt er geen demonstratie. Je wordt hiervan op de hoogte gebracht.
 
 # Opdracht
 
@@ -73,7 +73,7 @@ Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te ge
 
 Gebruik als casus deze C#-applicatie: <https://github.com/HoGentTIN/p3ops-22-23-2zit-app>.
 
-Maak een fork van deze applicatie onder je eigen Github-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
+Maak een fork van deze applicatie onder je eigen GitHub-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
 
 De README bevat instructies om de applicatie uit te rollen in een development- of productie-omgeving en hoe te testen.
 
@@ -92,7 +92,7 @@ Gebruik Vagant om een lokale VirtualBox-VM op te zetten als build server:
 - De build pipeline(s) bevat(ten) volgende fasen:
     1. **(C)** Statische analyse/linting
     2. **(M)** Build
-    3. **(W)** In deze opstelling is **geen** teststap voorzien
+    3. **(C)** Testen
     4. **(M)** Deployment naar applicatieserver
 
 Na lanceren van de build pipeline is de laatste revisie van de applicatie beschikbaar voor gebruikers op de applicatieserver.
@@ -103,7 +103,7 @@ Voorzie twee instanties van de applicatieserver:
 
 - **(M)** Een lokale VirtualBox-VM, opgezet met Vagrant
     - De installatie is volledig geautomatiseerd (met een Bash-script of Ansible): na `vagrant up` is de server zonder verdere manuele handelingen klaar om de applicatie te hosten.
-    - De applicatie is gebaseerd op .NET 5.0. Met de runtime heb je voldoende om de applicatie te lanceren (je hoeft dus niet de SDK te installeren).
+    - De applicatie is gebaseerd op .NET 6.0. Met de runtime heb je voldoende om de applicatie te lanceren (je hoeft dus niet de SDK te installeren).
 - **(S)** Een applicatieserver gehost op een cloud-platform (naar keuze)
     - Het opzetten van de VM is beschreven in een gedetailleerde procedurehandleiding
     - Na initialiseren van de VM is de verdere installatie en configuratie geautomatiseerd met hetzelfde script of playbook als de lokale instantie.
@@ -116,11 +116,11 @@ Verder hou je rekening met volgende requirements:
 - **(S)** De database draait in een aparte container
 - **(M)** De volledige installatie en configuratie van de applicatieserver is geautomatiseerd. Na uitvoeren van deze stap is de server dus klaar om de applicatie te hosten.
 - **(M)** Via port-forwarding wordt er voor gezorgd dat de webapplicatie zichtbaar is door in de webbrowser `https://IP_ADRES/` of `https://HOSTNAAM/` in te tikken (dus zonder een poortnummer toe te moeten voegen).
-- **(C)** De toestand van de applicatieserver is op te volgen via een monitoring-systeem, meer bepaald:
-    - Host-systeem: CPU, Geheugen, Disk I/O, Disk usage
-    - Overzicht containers: CPU, geheugen, ...
-    - Webserver-statistieken: requests, errors, ...
-    - Database-server statistieken: queries, errors, ...
+- **(C)** De toestand van de applicatieserver is op te volgen via een monitoringsysteem, meer bepaald:
+    - Host-systeem: CPU, geheugen, disk I/O, disk usage...
+    - Overzicht containers: CPU, geheugen...
+    - Webserver statistieken: requests, errors...
+    - Databaseserver statistieken: queries, errors...
 - **(C)** Er is een doorlichting van de productie-opstelling gebeurd op vlak van security. De resultaten van deze doorlichting zijn gedocumenteerd en op basis daarvan zijn er verbeteringen toegepast in de opstelling.
 
 ## Documentatie
@@ -135,15 +135,15 @@ Zoals je in de beschrijving van de opdracht al merkte, wordt er ook belang gehec
 De toegekende score hangt af van in hoeverre je de requirements gerealiseerd hebt:
 
 - **Totaal onvoldoende (0/70)**:
-    - Er is een Github-repository aangemaakt, maar daar zijn geen commits op gebeurd, of de aanwezige code is totaal onvoldoende om de opdracht te realiseren
+    - Er is een GitHub-repository aangemaakt, maar daar zijn geen commits op gebeurd, of de aanwezige code is totaal onvoldoende om de opdracht te realiseren
 - **Onvoldoende (1-34/70)**:
-    - De Must-have **(M)** requirements zijn slechts gedeeltelijk gerealiseerd.
+    - De must-have **(M)** requirements zijn slechts gedeeltelijk gerealiseerd.
     - De student heeft de correcte werking van de build pipelines of applicatieservers niet kunnen aantonen tijdens de demonstratie
     - De documentatie is onvolledig
 - **Voldoende (35-40/70)**:
     - Alle must-haves **(M)** zijn gerealiseerd
     - Should-haves **(S)** of could-haves **(C)** zijn niet of gedeeltelijk gerealiseerd
-    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code. Voorbeeldscenario: (1)De applicatie draait en is zichtbaar in een webbrowser; (2) Er wordt een wijziging aangebracht in de broncode van de applicatie (bv. achtergrondkleur veranderen); (3) De build pipeline wordt opgestart; (4) Na afloop zien we in de webbrowser dat de wijzigingen doorgevoerd zijn.
+    - De student heeft de correcte werking van de build pipeline(s) of applicatieserver(s) aangetoond tijdens de demonstratie en aan de hand van de aanwezige code. Voorbeeldscenario: (1) De applicatie draait en is zichtbaar in een webbrowser; (2) Er wordt een wijziging aangebracht in de broncode van de applicatie (bv. achtergrondkleur veranderen); (3) De build pipeline wordt opgestart; (4) Na afloop zien we in de webbrowser dat de wijzigingen doorgevoerd zijn.
     - De documentatie is volledig en overzichtelijk
 - **Goed (41-54/70)**:
     - Alle must-haves **(M)** en should-haves **(S)** zijn gerealiseerd
