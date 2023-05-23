@@ -8,4 +8,4 @@ Lees de [instructies](doc/instructies.md) voor de verwachtingen ivm het gebruik 
 
 ## Inhoudstafel
 
-(voeg hier zelf een inhoudtafel toe naar de documentatie en broncode)
+(voeg hier zelf een inhoudstafel toe naar de documentatie en broncode)
