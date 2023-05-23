@@ -33,13 +33,13 @@ Als je voor het onderdeel "observatie" de vermelding "Afwezig" kreeg, zal je nu 
 
 ## Individuele opdracht
 
-Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelaten. Je mag gebruik maken van de reeds bestaande broncode van je projectgroep, maar bouwt hier individueel op verder. Enkel jouw eigen bijdragen die je in de loop van de tweede zittijd gedaan hebt, worden meegerekend in de beoordeling.
+Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelaten. Je mag gebruik maken van de reeds bestaande broncode van je projectgroep, maar bouwt hier individueel op verder. Enkel jouw eigen bijdragen die je in de loop van de tweede zittijd geleverd hebt, worden meegerekend in de beoordeling.
 
 ## Deliverables
 
 De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende deliverables:
 
-- Een individuele **GitHub-repository** (die je aanmaakt met GitHub Classroom via deze link: <TODO>) met daarin:
+- Een individuele **GitHub-repository** (die je aanmaakt met GitHub Classroom via deze link: <https://classroom.github.com/a/IxsdQBiu>) met daarin:
     - Alle **broncode** voor het opzetten van de test- en productie-omgeving (zie verder)
     - Alle **procedurehandleidingen** die de lezer moeten in staat stellen om de omgevingen volledig te reproduceren, zonder verdere uitleg
 - De omgevingen zelf, waarvan de werking a.h.v. een **demonstratie** aangetoond wordt
@@ -48,7 +48,7 @@ De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende
 
 De **deadline** voor de individuele opdracht is **maandag 21 agustus 2023 om 12:00** ('s middags, dus niet middernacht!).
 
-De toestand van de GitHub-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet mogelijk zijn.
+De toestand van de GitHub-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet meer mogelijk zijn.
 
 Studenten van wie de inzending ontvankelijk blijkt om beoordeeld te worden, zullen een uitnodiging krijgen voor de verdediging van hun werk, tijdens het moment dat op het examenrooster ingepland is.
 
@@ -92,10 +92,10 @@ Gebruik Vagant om een lokale VirtualBox-VM op te zetten als build server:
 - De build pipeline(s) bevat(ten) volgende fasen:
     1. **(C)** Statische analyse/linting
     2. **(M)** Build
-    3. **(C)** Testen
+    3. **(S)** Testen
     4. **(M)** Deployment naar applicatieserver
 
-Na lanceren van de build pipeline is de laatste revisie van de applicatie beschikbaar voor gebruikers op de applicatieserver.
+Na opstarten van een build pipeline is de laatste revisie van de applicatie beschikbaar voor gebruikers op de applicatieserver (lokaal en/of cloud).
 
 ## Applicatieserver
 
@@ -107,8 +107,6 @@ Voorzie twee instanties van de applicatieserver:
 - **(S)** Een applicatieserver gehost op een cloud-platform (naar keuze)
     - Het opzetten van de VM is beschreven in een gedetailleerde procedurehandleiding
     - Na initialiseren van de VM is de verdere installatie en configuratie geautomatiseerd met hetzelfde script of playbook als de lokale instantie.
-
-Ter info, een video over het hosten van een ASP.NET Core applicatie op Azure: <https://www.youtube.com/watch?v=UpWeffxf790>.
 
 Verder hou je rekening met volgende requirements:
 
