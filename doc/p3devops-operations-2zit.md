@@ -10,7 +10,7 @@ authors:
 studyprogramme: Professionele bachelor toegepaste informatica
 course: 'DevOps Project: Operations'
 assignmenttype: Individuele opdracht
-academicyear: 2022-2023
+academicyear: 2024-2025
 
 abstract: |
     In dit document vinden studenten die voor dit opleidingsonderdeel niet geslaagd waren in de eerste zittijd alle informatie over deelnemen aan de tweede zittijd, meer bepaald alle praktische informatie en de (individuele) opdracht.
@@ -46,7 +46,7 @@ De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende
 
 ## Deadline
 
-De **deadline** voor de individuele opdracht is **maandag 21 agustus 2023 om 12:00** ('s middags, dus niet middernacht!).
+De **deadline** voor de individuele opdracht is **maandag 18 agustus 2025 om 12:00** ('s middags, dus niet middernacht!).
 
 De toestand van de GitHub-repository op dat moment geldt als je inzending. Aanpassingen na die datum zullen niet meer mogelijk zijn.
 
@@ -71,7 +71,7 @@ Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te ge
 
 ## Casus
 
-Gebruik als casus deze C#-applicatie: <https://github.com/HoGentTIN/p3ops-22-23-2zit-app>.
+Gebruik als casus deze C#-applicatie: <https://github.com/HoGentTIN/p3ops-demo-app>.
 
 Maak een fork van deze applicatie onder je eigen GitHub-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
 
