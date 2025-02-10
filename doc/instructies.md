@@ -21,5 +21,5 @@ De directory `doc/` bevat alle documentatie. Het bestand [procedure.md](procedur
 Beschrijf in de procedurehandleidingen altijd:
 
 - Welke voorwaarden moeten voldaan zijn om te kunnen beginnen aan de procedure (*prerequisites*, bv. geïnstalleerde software)?
-- Welke stappen moet je doorlopen om de opstelling te reproduceren? Gebruik fenced code blocks voor interacties met de terminal of desgevallend screenshots voor interacties met een GUI of webinterface. Hou screenshots bij in een subdirectory binnen deze repo.
+- Welke stappen moet je doorlopen om de opstelling te reproduceren? Gebruik fenced code blocks voor interacties met de terminal of desgevallend screenshots voor interacties met een GUI of webinterface. *Code blocks* hebben steeds de voorkeur! Hou screenshots bij in een subdirectory binnen deze repo.
 - Hoe kunnen we controleren dat het eindresultaat correct is, dat de procedure met succes is doorlopen?
