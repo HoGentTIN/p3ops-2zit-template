@@ -2,10 +2,12 @@
 language: 'dutch'
 title: 'Afspraken en opgave 2e zittijd'
 authors:
+    - name: Jeroen Courtens
+      email: jeroen.courtens@hogent.be
+    - name: Andy Van Maele
+      email: andy.vanmaele@hogent.be
     - name: Bert Van Vreckem
       email: bert.vanvreckem@hogent.be
-    - name: Thomas Aelbrecht
-      email: thomas.aelbrecht@hogent.be
 
 studyprogramme: Professionele bachelor toegepaste informatica
 course: 'DevOps Project: Operations'
@@ -29,7 +31,7 @@ In de tweede zittijd kan je enkel het eerste onderdeel hernemen in de vorm van e
 
 Voor het onderdeel "observatie van functioneren van de student" wordt de beoordeling uit de eerste zit overgenomen. Er is immers geen mogelijkheid om dit onderdeel tijdens het zomerreces te evalueren.
 
-Als je voor het onderdeel "observatie" de vermelding "Afwezig" kreeg, zal je nu dus ook een afwezigheid krijgen, wat er in de praktijk op neer komt dat je niet kan deelnemen aan de tweede zittijd (OER, art. 36; DOER, art.6).
+Als je voor het onderdeel "observatie" de vermelding "Afwezig" kreeg, zal je nu dus ook een afwezigheid krijgen, wat er in de praktijk op neer komt dat je niet kan deelnemen aan de tweede zittijd (OER, art. 36).
 
 ## Individuele opdracht
 
@@ -39,9 +41,12 @@ Het gaat hier om een **individuele** opdracht, dus samenwerken is niet toegelate
 
 De beoordeling van het resultaat van deze opdracht gebeurt op basis van volgende deliverables:
 
-- Een individuele **GitHub-repository** (die je aanmaakt met GitHub Classroom via deze link: <https://classroom.github.com/a/IxsdQBiu>) met daarin:
+- Een individuele **GitHub-repository** (die je aanmaakt met GitHub Classroom via deze link: <https://classroom.github.com/a/dPeeYc5q>) met daarin:
+
     - Alle **broncode** voor het opzetten van de test- en productie-omgeving (zie verder)
+
     - Alle **procedurehandleidingen** die de lezer moeten in staat stellen om de omgevingen volledig te reproduceren, zonder verdere uitleg
+
 - De omgevingen zelf, waarvan de werking a.h.v. een **demonstratie** aangetoond wordt
 
 ## Deadline
@@ -56,7 +61,7 @@ Als je geen GitHub-repo aangemaakt hebt, krijg je de vermelding "Afwezig". Als b
 
 # Opdracht
 
-De opdracht is grotendeels gelijklopend met deze uit de eerste zittijd, met name het opzetten van een build-pipeline voor een .Net-applicatie.
+De opdracht bestaat uit het opzetten van een build-pipeline voor een .Net-applicatie.
 
 In de hieronder opgesomde requirements duiden we telkens het belang aan volgends de [MoSCOW methode](https://nl.wikipedia.org/wiki/MoSCoW-methode):
 
@@ -67,11 +72,13 @@ In de hieronder opgesomde requirements duiden we telkens het belang aan volgends
 
 Hou rekening met deze prioriteiten bij het uitwerken van de opdracht. Het heeft bv. geen zin om "Could Have's" te implementeren als de basisfunctionaliteit niet gerealiseerd wordt.
 
-Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te gebruiken Linux-distributie of cloud-platform), dan kan je zelf een keuze maken (bv. verder werken op resultaten uit de 1e zittijd).
+Merk ook op dat het niet voldoende is dat je op het moment van de demo een werkende opstelling toont wanneer die niet geautomatiseerd is. Op dit punt in de opleiding toon je niet enkel aan dat je in staat bent om een systeem eenmalig werkend te krijgen, maar dat je dit ook herhaaldelijk en op een betrouwbare, kwaliteitsvolle manier kan.
+
+Als een bepaalde (niet-functionele) requirement niet gespecifieerd is (bv. te gebruiken Linux-distributie of cloud-platform), dan kan je zelf een keuze maken.
 
 ## Casus
 
-Gebruik als casus deze C#-applicatie: <https://github.com/HoGentTIN/p3ops-demo-app>.
+Gebruik als casus de C#-applicatie die we ook in het begin van het project aangereikt hebben (<https://github.com/HoGentTIN/p3ops-demo-app>), of eventueel een alternatieve .Net-applicatie (bv. een demo-applicatie uit de .Net-documentatie op de website van Microsoft -- voorwaarde is wel dat deze gebruik maakt van een database).
 
 Maak een fork van deze applicatie onder je eigen GitHub-account zodat je kan simuleren wat er gebeurt als je een commit uitvoert en het build-proces in gang zet.
 
@@ -84,7 +91,7 @@ Als het nuttig of nodig is om bestanden toe te voegen aan jouw fork van deze rep
 Gebruik Vagant om een lokale VirtualBox-VM op te zetten als build server:
 
 - **(M)** Gebruik Jenkins als CI/CD-tool. Verder zijn alle nodige tools en libraries geïnstalleerd zijn om de applicatie te bouwen (build) en uit te rollen (deploy).
-    - **(M)** De installatie is volledig geautomatiseerd (met Bash of Ansible). `vagrant up` geeft een werkende Jenkins-server
+    - **(M)** De installatie is volledig geautomatiseerd met Ansible: `vagrant up` geeft dus een werkende Jenkins-server.
     - **(C)** Configuratie is bij voorkeur geautomatiseerd, of **(M)** beschreven ahv een gedetailleerde procedurehandleiding
 - Doelstelling is om twee build pipelines op te zetten:
     1. **(M)** Build en deploy naar lokale appserver
@@ -102,11 +109,10 @@ Na opstarten van een build pipeline is de laatste revisie van de applicatie besc
 Voorzie twee instanties van de applicatieserver:
 
 - **(M)** Een lokale VirtualBox-VM, opgezet met Vagrant
-    - De installatie is volledig geautomatiseerd (met een Bash-script of Ansible): na `vagrant up` is de server zonder verdere manuele handelingen klaar om de applicatie te hosten.
-    - De applicatie is gebaseerd op .NET 6.0. Met de runtime heb je voldoende om de applicatie te lanceren (je hoeft dus niet de SDK te installeren).
+    - De installatie is volledig geautomatiseerd met Ansible: na `vagrant up` is de server zonder verdere manuele handelingen klaar om de applicatie te hosten.
 - **(S)** Een applicatieserver gehost op een cloud-platform (naar keuze)
-    - Het opzetten van de VM is beschreven in een gedetailleerde procedurehandleiding
-    - Na initialiseren van de VM is de verdere installatie en configuratie geautomatiseerd met hetzelfde script of playbook als de lokale instantie.
+    - Het opzetten van de VM (provisioning) is beschreven in een gedetailleerde procedurehandleiding
+    - Na initialiseren van de VM is de verdere installatie en configuratie geautomatiseerd met dezelfde playbook als de lokale instantie.
 
 Verder hou je rekening met volgende requirements:
 
